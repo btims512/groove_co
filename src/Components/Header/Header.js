@@ -1,129 +1,108 @@
 import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-// import { HeroStyles } from "./Hero.style";
-import { Button, Carousel } from "react-bootstrap";
+// import { BrowserRouter as Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import logo from "./logo.png";
+import ImageSlider from "../ImageSlider/ImageSlider";
 
-export const Header = () => {
-  return (
-    <div className="App">
-      <ReactBootStrap.Navbar
-        collapseOnSelect
-        expand="xl"
-        sticky="top"
-        bg="light"
-        variant="light"
-        style={{ height: "170px" }}
-      >
-        <ReactBootStrap.Navbar.Brand href="/">
-          Groove Co.
-        </ReactBootStrap.Navbar.Brand>
-        <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-          <ReactBootStrap.Nav className="ml-auto">
-            <Link to="/features">
-              <ReactBootStrap.Nav.Link href="#features">
-                Music
-              </ReactBootStrap.Nav.Link>
-            </Link>
-            <Link to="/Photos">
-              <ReactBootStrap.Nav.Link href="#Photos">
-                Photos
-              </ReactBootStrap.Nav.Link>
-            </Link>
-            <Link to="/Videos">
-              <ReactBootStrap.Nav.Link href="#Videos">
-                Videos
-              </ReactBootStrap.Nav.Link>
-            </Link>
-            <Link to="/Merch">
-              <ReactBootStrap.Nav.Link href="#Merch">
-                Merch
-              </ReactBootStrap.Nav.Link>
-            </Link>
-            {/* <ReactBootStrap.NavDropdown
-              title="YEET"
-              id="collasible-nav-dropdown"
-            >
-              <ReactBootStrap.NavDropdown.Item href="#action/3.1">
-                Action
-              </ReactBootStrap.NavDropdown.Item>
-              <ReactBootStrap.NavDropdown.Item href="#action/3.2">
-                Another action
-              </ReactBootStrap.NavDropdown.Item>
-              <ReactBootStrap.NavDropdown.Item href="#action/3.3">
-                Something
-              </ReactBootStrap.NavDropdown.Item>
-              <ReactBootStrap.NavDropdown.Divider />
-              <ReactBootStrap.NavDropdown.Item href="#action/3.4">
-                Separated link
-              </ReactBootStrap.NavDropdown.Item>
-            </ReactBootStrap.NavDropdown>
-          </ReactBootStrap.Nav>
-          <ReactBootStrap.Nav> */}
-
-            {/* <Link to="/deets">
-              <ReactBootStrap.Nav.Link href="#deets">
-                More deets
-              </ReactBootStrap.Nav.Link>
-            </Link>
-            <Link to="/dankmemes">
-              <ReactBootStrap.Nav.Link eventKey={2} href="#memes">
-                Dank memes
-              </ReactBootStrap.Nav.Link>
-            </Link> */}
-          </ReactBootStrap.Nav>
-        </ReactBootStrap.Navbar.Collapse>
-      </ReactBootStrap.Navbar>
-    </div>
-  );
-};
-
-// export const Hero = () => {
+// export const Header = () => {
 //   return (
-//     <div className="Hero">
-//     <Carousel>
-//   <Carousel.Item>
-//     <img
-//       className="d-block w-100"
-//       src="holder.js/800x400?text=First slide&bg=373940"
-//       alt="First slide"
-//     />
-//     <Carousel.Caption>
-//       <h3>First slide label</h3>
-//       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-//     </Carousel.Caption>
-//   </Carousel.Item>
-//   <Carousel.Item>
-//     <img
-//       className="d-block w-100"
-//       src="holder.js/800x400?text=Second slide&bg=282c34"
-//       alt="Second slide"
-//     />
+//     <div className="App">
+//  <ReactBootStrap.Navbar
+//   collapseOnSelect
+//   expand="xl"
+//   sticky="top"
+//   bg="light"
+//   variant="light"
+//   // style={{ height: "80%vh", width: "100&vw" }}
+// >
+// </ReactBootStrap.Navbar>
 
-//     <Carousel.Caption>
-//       <h3>Second slide label</h3>
-//       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-//     </Carousel.Caption>
-//   </Carousel.Item>
-//   <Carousel.Item>
-//     <img
-//       className="d-block w-100"
-//       src="holder.js/800x400?text=Third slide&bg=20232a"
-//       alt="Third slide"
-//     />
-
-//     <Carousel.Caption>
-//       <h3>Third slide label</h3>
-//       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-//     </Carousel.Caption>
-//   </Carousel.Item>
-// </Carousel>
-//         {/* <Button variant="outline-secondary">Gallery</Button>{" "}
-//         <Button variant="outline-secondary">Tour Dates</Button>{" "} */}
-
+// <ReactBootStrap.Navbar.Brand href="/">
+//   <img src={logo} height="125rm"/>
+// </ReactBootStrap.Navbar.Brand>
+//         <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+//         <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+//           <ReactBootStrap.Nav className="ml-auto">
+//             <Link to="/Music">
+//               <ReactBootStrap.Nav.Link href="#Music">
+//                 Music
+//               </ReactBootStrap.Nav.Link>
+//             </Link>
+//             <Link to="/Photos">
+//               <ReactBootStrap.Nav.Link href="#Photos">
+//                 Photos
+//               </ReactBootStrap.Nav.Link>
+//             </Link>
+//             <Link to="/Videos">
+//               <ReactBootStrap.Nav.Link href="#Videos">
+//                 Videos
+//               </ReactBootStrap.Nav.Link>
+//             </Link>
+//             <Link to="/Merch">
+//               <ReactBootStrap.Nav.Link href="#Merch">
+//                 Merch
+//               </ReactBootStrap.Nav.Link>
+//             </Link>
+//           </ReactBootStrap.Nav>
+//         </ReactBootStrap.Navbar.Collapse>
 //     </div>
 //   );
 // };
 
-export default Header;
+export default function Header() {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/Music">Music</Link>
+          <Link to="/Photos">Photos</Link>
+          <Link to="/Videos">Videos</Link>
+          <Link to="/Merch">Merch</Link>
+        </nav>
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/Music">
+            <Music />
+          </Route>
+          <Route path="/Photos">
+            <Photos />
+          </Route>
+          <Route path="/Videos">
+            <Videos />
+          </Route>
+          <Route path="/Merch">
+            <Merch />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+function Home() {
+  return <ImageSlider />;
+}
+
+function Music() {
+  return <h2>Music</h2>;
+}
+
+function Photos() {
+  return <h2>Photos</h2>;
+}
+
+function Videos() {
+  return <h2>Videos</h2>;
+}
+
+function Merch() {
+  return <h2>Merch</h2>;
+}
+
+// export default Header;

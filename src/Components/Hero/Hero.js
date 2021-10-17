@@ -1,6 +1,5 @@
 import { Carousel } from "react-bootstrap";
 // import HeroStyles from "./Components/Hero/Hero.style";
-// import heropic1 from "./Images/herpic1.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Hero = () => {

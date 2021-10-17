@@ -1,25 +1,17 @@
 import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 // import NewsLetter from "./NewsLetter/NewsLetter";
-import newsletter from "./NewsLetter";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import {
-  AiOutlineFacebook,
-  AiOutlineInstagram,
-  AiOutlineYoutube,
-  AiOutlineApple,
-} from "react-icons/ai";
-import { FaSpotify } from "react-icons/fa";
+
+// import { BrowserRouter as Router, Link } from "react-router-dom";
+import { AiOutlineFacebook } from "react-icons/ai";
 import {
   SiInstagram,
   SiYoutube,
   SiSpotify,
   SiApplemusic,
 } from "react-icons/si";
+// for breaking up space //
 import { BsDot } from "react-icons/bs";
-{
-  /* BsDot for breaking up space between icons */
-}
 
 const NavBar = () => {
   return (
@@ -43,7 +35,7 @@ const NavBar = () => {
           }
         ></SiInstagram>
         <BsDot color="transparent" />
-        <BsDot color="transparent" />
+
         {/* // Facebook // */}
         <AiOutlineFacebook
           size="3.5em"
@@ -54,7 +46,7 @@ const NavBar = () => {
           }
         ></AiOutlineFacebook>
         <BsDot color="transparent" />
-        <BsDot color="transparent" />
+
         {/* // Youtube // */}
         <SiYoutube
           size="3em"
@@ -68,7 +60,7 @@ const NavBar = () => {
           }
         ></SiYoutube>
         <BsDot color="transparent" />
-        <BsDot color="transparent" />
+
         {/* // Spotify // */}
         <SiSpotify
           size="2.5em"
@@ -82,7 +74,7 @@ const NavBar = () => {
           }
         ></SiSpotify>
         <BsDot color="transparent" />
-        <BsDot color="transparent" />
+
         {/* // Apple Music // */}
         <SiApplemusic
           size="2.5em"
