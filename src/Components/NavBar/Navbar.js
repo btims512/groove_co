@@ -1,7 +1,7 @@
 import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 // import NewsLetter from "./NewsLetter/NewsLetter";
-import newsletter from "./NewsLetter/NewsLetter";
+import newsletter from "./NewsLetter";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import {
   AiOutlineFacebook,
