@@ -61,8 +61,6 @@ export default function Header() {
           <Link to="/Videos">Videos</Link>
           <Link to="/Merch">Merch</Link>
         </nav>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/Music">
             <Music />
