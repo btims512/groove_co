@@ -1,78 +1,131 @@
 import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
+// import NewsLetter from "./NewsLetter/NewsLetter";
+import newsletter from "./NewsLetter/NewsLetter";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import {
+  AiOutlineFacebook,
+  AiOutlineInstagram,
+  AiOutlineYoutube,
+  AiOutlineApple,
+} from "react-icons/ai";
+import { FaSpotify } from "react-icons/fa";
+import {
+  SiInstagram,
+  SiYoutube,
+  SiSpotify,
+  SiApplemusic,
+} from "react-icons/si";
+import { BsDot } from "react-icons/bs";
+{
+  /* BsDot for breaking up space between icons */
+}
 
 const NavBar = () => {
   return (
     <div className="App">
       <ReactBootStrap.Navbar
         collapseOnSelect
-        expand="xl"
+        expand="sm"
         bg="dark"
         variant="dark"
       >
-        <ReactBootStrap.Navbar.Brand href="/">
-          Groove Co.
-        </ReactBootStrap.Navbar.Brand>
-        <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-          <ReactBootStrap.Nav className="ml-auto">
-            <Link to="/features">
-              <ReactBootStrap.Nav.Link href="#features">
-                Music
-              </ReactBootStrap.Nav.Link>
-            </Link>
-            <Link to="/Photos">
-              <ReactBootStrap.Nav.Link href="#Photos">
-                Photos
-              </ReactBootStrap.Nav.Link>
-            </Link>
-            <Link to="/Videos">
-              <ReactBootStrap.Nav.Link href="#Videos">
-                Videos
-              </ReactBootStrap.Nav.Link>
-            </Link>
-            <Link to="/Merch">
-              <ReactBootStrap.Nav.Link href="#Merch">
-                Merch
-              </ReactBootStrap.Nav.Link>
-            </Link>
-            {/* <ReactBootStrap.NavDropdown
-              title="YEET"
-              id="collasible-nav-dropdown"
-            >
-              <ReactBootStrap.NavDropdown.Item href="#action/3.1">
-                Action
-              </ReactBootStrap.NavDropdown.Item>
-              <ReactBootStrap.NavDropdown.Item href="#action/3.2">
-                Another action
-              </ReactBootStrap.NavDropdown.Item>
-              <ReactBootStrap.NavDropdown.Item href="#action/3.3">
-                Something
-              </ReactBootStrap.NavDropdown.Item>
-              <ReactBootStrap.NavDropdown.Divider />
-              <ReactBootStrap.NavDropdown.Item href="#action/3.4">
-                Separated link
-              </ReactBootStrap.NavDropdown.Item>
-            </ReactBootStrap.NavDropdown>
-          </ReactBootStrap.Nav>
-          <ReactBootStrap.Nav> */}
-
-            {/* <Link to="/deets">
-              <ReactBootStrap.Nav.Link href="#deets">
-                More deets
-              </ReactBootStrap.Nav.Link>
-            </Link>
-            <Link to="/dankmemes">
-              <ReactBootStrap.Nav.Link eventKey={2} href="#memes">
-                Dank memes
-              </ReactBootStrap.Nav.Link>
-            </Link> */}
-          </ReactBootStrap.Nav>
-        </ReactBootStrap.Navbar.Collapse>
+        {/* // Instagram // */}
+        <SiInstagram
+          size="3em"
+          cursor="pointer"
+          color="white"
+          onClick={() =>
+            window.open(
+              "https://www.instagram.com/groove_company/?hl=en",
+              "_blank"
+            )
+          }
+        ></SiInstagram>
+        <BsDot color="transparent" />
+        <BsDot color="transparent" />
+        {/* // Facebook // */}
+        <AiOutlineFacebook
+          size="3.5em"
+          cursor="pointer"
+          color="white"
+          onClick={() =>
+            window.open("https://www.facebook.com/Grooveco.atx/", "_blank")
+          }
+        ></AiOutlineFacebook>
+        <BsDot color="transparent" />
+        <BsDot color="transparent" />
+        {/* // Youtube // */}
+        <SiYoutube
+          size="3em"
+          cursor="pointer"
+          color="white"
+          onClick={() =>
+            window.open(
+              "https://www.youtube.com/channel/UC5384HLuOA71GCXvsh2rlJg",
+              "_blank"
+            )
+          }
+        ></SiYoutube>
+        <BsDot color="transparent" />
+        <BsDot color="transparent" />
+        {/* // Spotify // */}
+        <SiSpotify
+          size="2.5em"
+          cursor="pointer"
+          color="white"
+          onClick={() =>
+            window.open(
+              "https://open.spotify.com/artist/1pKUJQQu7bXYWYRhuRkqkd?si=r5DvgM7uQla365FEQZueqA",
+              "_blank"
+            )
+          }
+        ></SiSpotify>
+        <BsDot color="transparent" />
+        <BsDot color="transparent" />
+        {/* // Apple Music // */}
+        <SiApplemusic
+          size="2.5em"
+          cursor="pointer"
+          color="white"
+          onClick={() =>
+            window.open(
+              "https://music.apple.com/us/artist/groove-co/1494640812",
+              "_blank"
+            )
+          }
+        ></SiApplemusic>
       </ReactBootStrap.Navbar>
     </div>
   );
 };
+
+// const NewsLetter = () => (
+//   <>
+//   <BsDot color="transparent" />
+//         <BsDot color="transparent" />
+//     <div className="p-2" div className="Signup__text">
+//     </div>
+//     <section className="Signup">
+//       <form class="Signup__form" id="newsletter">
+//         <input style={{ width: "10em" }}
+//           required
+//           id="email"
+//           type="email"
+//           placeholder="Enter your Email to signup for our newsletter"
+//         ></input>
+//       </form>
+//     </section>
+//     <BsDot color="transparent" />
+//     <button
+//       form="newsletter"
+//       style={{ height: "30px", width: "30px" }}
+//       type="submit"
+//       class="Signup__button"
+//     >
+//       Submit
+//     </button>
+//   </>
+// );
 
 export default NavBar;

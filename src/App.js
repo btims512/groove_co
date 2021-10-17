@@ -6,13 +6,17 @@ import Merch from "./Components/NavBar/Merch";
 import Videos from "./Components/NavBar/Videos";
 import NavBar from "./Components/NavBar/Navbar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Header from "./Components/Header/Header";
+// import Header from "./Components/Header/Header";
+import { Header, Hero } from "./Components/Header/Header";
+
+
 
 function App() {
   return (
     <div className="App">
       <Router>
         <NavBar />
+        <Header />
         <Switch>
           <Route path="/features" component={Music}>
             <Music />
@@ -27,7 +31,7 @@ function App() {
             <Photos />
           </Route>
         </Switch>
-        <Header />
+        {/* <Hero /> */}
       </Router>
     </div>
   );
