@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const HeaderStyles = styled.div`
+const HeaderStyles = styled.img`
   color: White;
-  position: auto;
+  position: fixed;
   top: 0;
   display: flex;
   flex-direction: row;

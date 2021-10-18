@@ -5,7 +5,7 @@ import ImageSlider from "../ImageSlider/ImageSlider";
 import HeaderStyles from "./Header.style";
 import "./styles.scss";
 import HomePage from "../HomePage/HomePage";
-import Footer from "../Footer/Footer";
+import About from "../About/About.js";
 
 export default function Header() {
   return (
@@ -14,25 +14,37 @@ export default function Header() {
         <nav className="logo">
           <Link
             to="/"
-            style={{ fontSize: "2em", color: "#344", float: "left" }}
+            style={{
+              fontSize: "2em",
+              color: "#344",
+              float: "left",
+            }}
           >
             <img src={logo} height="125rm" />
           </Link>
-
-        <HeaderStyles />
-
-          <Link to="/Music" style={{ fontSize: "2em", color: "#344" }}>
-            Music
-          </Link>
-          <Link to="/Photos" style={{ fontSize: "2em", color: "#344" }}>
-            | Photos
-          </Link>
-          <Link to="/Videos" style={{ fontSize: "2em", color: "#344" }}>
-            | Videos
-          </Link>
-          <Link to="/Merch" style={{ fontSize: "2em", color: "#344" }}>
-            | Merch
-          </Link>
+          <div
+            style={
+              {
+                // position: "fixed",
+                // display: "flex",
+                // flexDirection: "row",
+                // justifyContent: "center",
+              }
+            }
+          >
+            <Link to="/Music" style={{ fontSize: "2em", color: "#344" }}>
+              Music
+            </Link>
+            <Link to="/Photos" style={{ fontSize: "2em", color: "#344" }}>
+              | Photos
+            </Link>
+            <Link to="/Videos" style={{ fontSize: "2em", color: "#344" }}>
+              | Videos
+            </Link>
+            <Link to="/About" style={{ fontSize: "2em", color: "#344" }}>
+              | About
+            </Link>
+          </div>
           <Switch>
             <Route path="/Music">
               <Music />
@@ -43,8 +55,8 @@ export default function Header() {
             <Route path="/Videos">
               <Videos />
             </Route>
-            <Route path="/Merch">
-              <Merch />
+            <Route path="/About">
+              <About />
             </Route>
             <Route path="/">
               <Home />
@@ -59,16 +71,16 @@ export default function Header() {
 // Home Page //
 function Home() {
   return (
-    <div>
+    <>
       <div
-        style={{ borderBottom: "7px solid rgb(187,190,192)", padding: "13px" }}
+      
+        /* <div style={{ borderBottom: "7px solid rgb(187,190,192)" }} /> */
+        className="d-flex justify-content-around"
+        className="d-flex justify-content-around"
       />
       <ImageSlider />
-      {/* <div style={{ borderBottom: "7px solid rgb(187,190,192)" }} /> */}
-      <div className="d-flex justify-content-around"></div>
-      <div className="d-flex justify-content-around"></div>
       <HomePage />
-    </div>
+    </>
   );
 }
 
@@ -87,8 +99,8 @@ function Videos() {
 }
 
 // Merch Page //
-function Merch() {
-  return <h2>Merch</h2>;
-}
+// function About() {
+//   return <h2>We are Groove Co.</h2>;
+// }
 
 // export default Header;
