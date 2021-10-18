@@ -1,15 +1,11 @@
-import React, { useState, useRef } from "react";
-import * as ReactBootStrap from "react-bootstrap";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logo from "./logo.png";
 import ImageSlider from "../ImageSlider/ImageSlider";
 import HeaderStyles from "./Header.style";
-import { Card, Button, Row, Col } from "react-bootstrap";
-import { useSpring, animated } from "react-spring";
-import ReactParticles from "react-particles-js";
-import particlesConfig from "./particles-config.js";
-import Particles from "react-particles-js";
 import "./styles.scss";
+import HomePage from "../HomePage/HomePage";
+import Footer from "../Footer/Footer";
 
 export default function Header() {
   return (
@@ -22,9 +18,9 @@ export default function Header() {
           >
             <img src={logo} height="125rm" />
           </Link>
-        </nav>
+
         <HeaderStyles />
-        <nav>
+
           <Link to="/Music" style={{ fontSize: "2em", color: "#344" }}>
             Music
           </Link>
@@ -64,28 +60,14 @@ export default function Header() {
 function Home() {
   return (
     <div>
-      <div style={{ borderBottom: "8px solid black", padding: "13px" }} />
+      <div
+        style={{ borderBottom: "7px solid rgb(187,190,192)", padding: "13px" }}
+      />
       <ImageSlider />
-      <div style={{ borderBottom: "8px solid black" }} />
+      {/* <div style={{ borderBottom: "7px solid rgb(187,190,192)" }} /> */}
       <div className="d-flex justify-content-around"></div>
       <div className="d-flex justify-content-around"></div>
-      <Row xs={1} md={2} className="g-4">
-        {Array.from({ length: 4 }).map((_, idx) => (
-          <Col>
-            <Card>
-              <Card.Body>
-                <Card.Img variant="top" src={logo} />
-                <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+      <HomePage />
     </div>
   );
 }

@@ -1,10 +1,12 @@
 import React from "react";
 import { Navbar, Container } from "react-bootstrap";
+import FooterStyles from "./Footer.style";
 
-export default function Header() {
+
+export default function Footer() {
   return (
-    <div>
-      <Navbar bg="dark">
+      <Navbar bg= "dark">
+    <FooterStyles>
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -12,12 +14,11 @@ export default function Header() {
               width="30"
               height="30"
               className="d-inline-block align-top"
-              alt="React Bootstrap logo"
+              alt=""
             />
           </Navbar.Brand>
         </Container>
-      </Navbar>
-      ;
-    </div>
+    </FooterStyles>
+      </Navbar> 
   );
 }
