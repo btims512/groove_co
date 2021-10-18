@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 const HeaderStyles = styled.div`
   color: White;
-  align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  padding: 10px;
-  height: 10vh;
-  background-color: red;
+  justify-content: right;
+  padding: 25px;
+  margin-bottom: 4.5px;
 `;
 
+export default HeaderStyles;
